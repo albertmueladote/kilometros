@@ -15,7 +15,7 @@ define('VIEWS', $_SERVER['DOCUMENT_ROOT'] . '/views/');
 
 define('PDF_PATH', 'http://kilometros.test/km/pdf/');
 
-define('DDBB_HOST', 'localhost');
+define('DDBB_HOST', '127.0.0.1');
 define('DDBB_NAME', 'kilometros');
 define('DDBB_USER', 'root');
 define('DDBB_PASSWORD', '');
