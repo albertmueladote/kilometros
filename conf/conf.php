@@ -17,8 +17,8 @@ define('PDF_PATH', 'http://kilometros.test/km/pdf/');
 
 define('DDBB_HOST', '127.0.0.1');
 define('DDBB_NAME', 'kilometros');
-define('DDBB_USER', 'root');
-define('DDBB_PASSWORD', '');
+define('DDBB_USER', 'kilometros');
+define('DDBB_PASSWORD', '1988akalian');
 
 define('COOKIE', 'kilometroshqyx5Z8VD1NGNmmbgRie7T3xwfz0hi');
 
