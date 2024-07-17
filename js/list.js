@@ -19,6 +19,8 @@ function remove(id)
         url: 'controllers/ajaxRemove.php',
         type: 'POST',
         data: { id: id },
+            'X-Requested-With': 'XMLHttpRequest'
+        },
         success: function(response) {
             response = JSON.parse(response);
             console.log('Respuesta del servidor:', response);

@@ -16,6 +16,8 @@ function login()
         type: 'POST',
         url: 'controllers/ajaxLogin.php',
         data: { user: user, password: password },
+            'X-Requested-With': 'XMLHttpRequest'
+        },
         success: function(response) {
             console.log('Respuesta del servidor:', response);
             window.location.href = '/';

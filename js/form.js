@@ -136,6 +136,9 @@ function save()
         url: 'controllers/ajaxSave.php',
         type: 'POST',
         data: { data: JSON.stringify(rows), total: total, from: from, to: to},
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        },
         success: function(response) {
             response = JSON.parse(response);
             if(response.result)

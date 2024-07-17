@@ -18,6 +18,8 @@ function pdf()
         url: 'controllers/ajaxPdf.php',
         type: 'POST',
         data: { html: htmlContent, id: urlObj.searchParams.get('id') },
+            'X-Requested-With': 'XMLHttpRequest'
+        },
         success: function(response) {
             response = JSON.parse(response);
             console.log('Respuesta del servidor:', response);

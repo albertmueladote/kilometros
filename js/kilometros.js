@@ -25,6 +25,9 @@ function logout()
         type: 'POST',
         url: 'controllers/ajaxLogout.php',
         data: { },
+        headers: {
+	        'X-Requested-With': 'XMLHttpRequest'
+	    },
         success: function(response) {
             console.log('Respuesta del servidor:', response);
             window.location.href = '/login';
