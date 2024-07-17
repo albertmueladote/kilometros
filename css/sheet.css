@@ -1,0 +1,13 @@
+.create-pdf {
+	margin-top: 32px;
+	text-align: center;
+}
+
+.container-fluid {
+	margin-top: 32px;
+	width: 760px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    position: relative;
+    overflow-y: auto; 
+}

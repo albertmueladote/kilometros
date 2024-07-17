@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^login$ controllers/controllerLogin.php [L]
+RewriteRule ^crear$ controllers/controllerForm.php [L]
+RewriteRule ^pdf$ controllers/controllerSheet.php [L]
+RewriteRule ^lista$ controllers/controllerList.php [L]
+RewriteRule ^$ controllers/controllerMenu.php [L]

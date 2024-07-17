@@ -1,0 +1,31 @@
+.container-fluid {
+	margin-top: 32px;
+	width: 800px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    overflow-y: auto; 
+}
+
+.file_content {
+    width: 25%;
+    vertical-align: top;
+    display: inline-block;
+    padding: 10px;
+}
+
+.file {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+    padding: 5px;
+}
+
+.file button {
+    margin-top: 10px;
+}
+
+.file div:nth-child(1) {
+    min-height: 48px;
+}
