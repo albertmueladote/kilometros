@@ -16,6 +16,7 @@ function login()
         type: 'POST',
         url: 'controllers/ajaxLogin.php',
         data: { user: user, password: password },
+        headers: {
             'X-Requested-With': 'XMLHttpRequest'
         },
         success: function(response) {

@@ -18,6 +18,7 @@ function pdf()
         url: 'controllers/ajaxPdf.php',
         type: 'POST',
         data: { html: htmlContent, id: urlObj.searchParams.get('id') },
+        headers: {
             'X-Requested-With': 'XMLHttpRequest'
         },
         success: function(response) {

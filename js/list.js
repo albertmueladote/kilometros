@@ -19,6 +19,7 @@ function remove(id)
         url: 'controllers/ajaxRemove.php',
         type: 'POST',
         data: { id: id },
+        headers: {
             'X-Requested-With': 'XMLHttpRequest'
         },
         success: function(response) {
