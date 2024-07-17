@@ -1,5 +1,8 @@
 <?php
 require '../conf/conf.php';
+if (!$cookie->exists()) {
+    die();
+}
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if($cookie->delete()) {
         echo json_encode(['result' => true]);

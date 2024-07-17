@@ -15,7 +15,7 @@ define('VIEWS', $_SERVER['DOCUMENT_ROOT'] . '/views/');
 
 define('PDF_PATH', 'http://kilometros.test/km/pdf/');
 
-if ($_SERVER['SERVER_NAME'] === 'localhost') {
+if ($_SERVER['SERVER_NAME'] === 'kilometros.test') {
 	define('DDBB_HOST', '127.0.0.1');
 	define('DDBB_NAME', 'kilometros');
 	define('DDBB_USER', 'root');
@@ -41,23 +41,3 @@ require _CLASS . 'classCookie.php';
 $ddbb = new DDBB();
 $excel = new Excel();
 $cookie = new Cookie();
-
-if ($_SERVER['REQUEST_URI'] == '/login') {
-    if ($cookie->exists()) {
-        header("Location: /");
-    }
-}else {
-	if(isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
-		if ($_SERVER['REQUEST_URI'] !== '/login' && empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest') {
-		    if (!$cookie->exists()) {
-		        header("Location: /login");
-		    }
-		}
-	} else {
-		if ($_SERVER['REQUEST_URI'] !== '/login') {
-		    if (!$cookie->exists()) {
-		        header("Location: /login");
-		    }
-		}
-	}
-}

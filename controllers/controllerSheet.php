@@ -1,5 +1,8 @@
 <?php
 	require '../conf/conf.php';
+	if (!$cookie->exists()) {
+        header("Location: /login");
+    }
 	if(isset($_GET['id']))
 	{
 		$file = $ddbb->getById($_GET['id']);
