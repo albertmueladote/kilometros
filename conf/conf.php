@@ -13,7 +13,12 @@ define('KM_PDF', $_SERVER['DOCUMENT_ROOT'] . '/km/pdf/');
 define('VENDOR', $_SERVER['DOCUMENT_ROOT'] . '/vendor/');
 define('VIEWS', $_SERVER['DOCUMENT_ROOT'] . '/views/');
 
-define('PDF_PATH', 'http://kilometros.test/km/pdf/');
+
+if ($_SERVER['SERVER_NAME'] === 'kilometros.test') {
+	define('PDF_PATH', 'http://kilometros.test/km/pdf/');
+} else {
+	define('PDF_PATH', 'https://albertm.in/km/pdf/');
+}
 
 if ($_SERVER['SERVER_NAME'] === 'kilometros.test') {
 	define('DDBB_HOST', '127.0.0.1');
