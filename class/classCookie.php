@@ -16,7 +16,7 @@ class Cookie {
     }
 
     public function delete() {
-        setcookie(COOKIE, "", time() - 3600, "/", "albertm.in");
+        setcookie(COOKIE, "", time() - 3600, "/");
         unset($_COOKIE[COOKIE]);
         return true;
     }
