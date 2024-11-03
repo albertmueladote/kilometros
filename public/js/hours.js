@@ -79,7 +79,7 @@ function totalHours(calendar, dateStr)
 		var getDay = clickedDate.getDay();
 	}
     var startOfWeek = new Date(clickedDate.setDate(clickedDate.getDate() - getDay + 1));
-    var endOfWeek = new Date(clickedDate.setDate(clickedDate.getDate() + 60));
+    var endOfWeek = new Date(clickedDate.setDate(clickedDate.getDate() + 6));
 
     var startOfWeekStr = startOfWeek.toISOString().split('T')[0];
     var endOfWeekStr = endOfWeek.toISOString().split('T')[0];
