@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <?php require 'head.php'; ?>
-    <link rel="stylesheet" href="css/sheet.css">
-    <script src="js/sheet.js" defer></script>
+    <?php require PARTIALS . 'head.php'; ?>
+    <link rel="stylesheet" href="public/css/sheet.css">
+    <script src="public/js/sheet.js" defer></script>
 </head>
 <body>
-	<?php require 'navbar.php'; ?>
+	<?php require PARTIALS . 'navbar.php'; ?>
 	<div class="center create-pdf"><button type="button" class="pdf btn btn-primary">Crear PDF</button></div>
     <div class="container-fluid">
     	<div style="position: absolute; top: 32px; left: 0;">
@@ -67,6 +67,6 @@
 			* El corresponent document no tindrà validesa sense la signatura del cap de servei corresponent
 		</div>
     </div>
-    <?php require 'footer.php'; ?>
+    <?php require PARTIALS . 'footer.php'; ?>
 </body>
 </html>

@@ -1,0 +1,48 @@
+.loading {
+	background-image: url(../images/loading.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+}
+
+.container-fluid {
+    margin-bottom: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+footer {
+    background-color: #647b83;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 15;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+}

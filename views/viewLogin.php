@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <?php require 'head.php'; ?>
-    <link rel="stylesheet" href="css/login.css">
-    <script src="js/login.js" defer></script>
+    <?php require PARTIALS . 'head.php'; ?>
+    <link rel="stylesheet" href="public/css/login.css">
+    <script src="public/js/login.js" defer></script>
 </head>
 <body>
-    <?php require 'navbar.php'; ?>
+    <?php require PARTIALS . 'navbar.php'; ?>
     <div class="container-fluid">
         <header class="center">
             <h1>Kilómetros</h1>
@@ -35,6 +35,6 @@
               </div>
         </form>
     </div>
-    <?php require 'footer.php'; ?>
+    <?php require PARTIALS . '/footer.php'; ?>
 </body>
 </html>

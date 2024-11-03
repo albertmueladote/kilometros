@@ -1,0 +1,15 @@
+.fc-day {
+	cursor: pointer;
+}
+
+.fc-event-title-container {
+	text-align: center;
+}
+
+.fc-daygrid-total-top {
+	height: 32px;
+}
+
+.fc-total {
+	background-color: hsla(0, 0%, 82%, .3);
+}

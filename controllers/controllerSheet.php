@@ -5,7 +5,7 @@
     }
 	if(isset($_GET['id']))
 	{
-		$file = $ddbb->getById($_GET['id']);
+		$file = $excel->getById($_GET['id']);
 		$data = $excel->read($file['excel_path']);
 		$from_month = $excel->getMonth(date('n', $file['from_date']));
 		$from_day = date('j', $file['from_date']);

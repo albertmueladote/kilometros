@@ -1,0 +1,16 @@
+.container-fluid {
+	margin-top: 32px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.menu button {
+    width: 50%;
+    height: 150px;
+    max-height: 335px;
+}
+
+.row div {
+    padding: 10px;
+}
