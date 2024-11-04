@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
     <?php require PARTIALS . 'head.php'; ?>
-    <link rel="stylesheet" href="public/css/login.css">
-    <script src="public/js/login.js" defer></script>
+    <link rel="stylesheet" href="public/css/login.css?v=<?php echo time(); ?>">
+    <script src="public/js/login.js?v=<?php echo time(); ?>" defer></script>
 </head>
 <body>
     <?php require PARTIALS . 'navbar.php'; ?>

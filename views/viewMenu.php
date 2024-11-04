@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
     <?php require PARTIALS . 'head.php'; ?>
-    <link rel="stylesheet" href="public/css/menu.css">
-    <script src="public/js/menu.js" defer></script>
+    <link rel="stylesheet" href="public/css/menu.css?v=<?php echo time(); ?>">
+    <script src="public/js/menu.js?v=<?php echo time(); ?>" defer></script>
 </head>
 <body>
     <?php require PARTIALS . 'navbar.php'; ?>
