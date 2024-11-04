@@ -13,3 +13,25 @@
 .fc-total {
 	background-color: hsla(0, 0%, 82%, .3);
 }
+
+.fc-total .redfc-daygrid-day-frame {
+	position: relative;
+}
+
+.fc-daygrid-day-events.red {
+	background-color: red;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    padding: 1px;
+}
+
+.fc-daygrid-day-events.green {
+	background-color: green;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    padding: 1px;
+}

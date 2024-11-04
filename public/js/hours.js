@@ -119,10 +119,11 @@ function totalHours(calendar, dateStr)
     var missingTime = (missingMinutes < 0 ? '-' : '+') + 
         missingHours + '.' + (missingRemainingMinutes < 10 ? '0' + missingRemainingMinutes : missingRemainingMinutes);
 
-    var missingClass = missingMinutes < 0 ? "red" : "";
+    var missingClass = missingMinutes < 0 ? "red" : "green";
 
-    var resultHtml = '<div class="' + missingClass + '">' + total + '</div><div>' + missingTime + '</div>';
-    var totalTd = $('td[data-date="' + dateStr + '"]').closest('tr').find('td.fc-total .fc-daygrid-day-total');
+    var resultHtml = '<div class="fc-daygrid-day-frame"><div class="mt-2 text-center">' + total + '</div><div class="fc-daygrid-day-events ' + missingClass + '"><div class="fc-event-main"><div class="fc-event-main-frame"><div class="fc-event-title fc-sticky">' + missingTime + '</div></div></div></div></div>'
+    var totalTd = $('td[data-date="' + endOfWeekStr + '"]').closest('tr').find('td.fc-total .fc-daygrid-day-total');
+    $('td[data-date="' + startOfWeekStr + '"]').closest('tr').find('td.fc-total .fc-daygrid-day-total').html('');
     $(totalTd).html(resultHtml);
 }
 
