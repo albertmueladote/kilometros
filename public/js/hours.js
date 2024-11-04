@@ -123,9 +123,17 @@ function totalHours(calendar, dateStr)
 		var _class="red";
 	}
 
-	var missingHours = total - 37.5;
+	var missingClass = totalMinutes < 37.5 * 60 ? "red" : "";
+    const targetMinutes = 37.5 * 60;
+    var missingMinutes = targetMinutes - totalMinutes;
 
-	total = '<div class="' + _class + '">' + total + '</div><div>' + missingHours + '</div>';
+    var missingHours = Math.floor(missingMinutes / 60);
+    var missingRemainingMinutes = missingMinutes % 60;
+
+    var missingTime = -1 * (missingHours + '.' + (missingRemainingMinutes < 10 ? '0' + missingRemainingMinutes : missingRemainingMinutes));
+
+
+	total = '<div class="' + _class + '">' + total + '</div><div>' + missingTime + '</div>';
 	$(totalTd).html(total);
 }
 
