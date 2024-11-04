@@ -3,7 +3,7 @@ $( document ).ready(function() {
         event.preventDefault();
         login();
     });
-    size(36);
+
     loading();
 });
 

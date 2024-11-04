@@ -1,5 +1,5 @@
 <footer class="bg-dark text-center text-lg-start text-white">
-  <div class="container p-4">
+  <div class="container p-3">
     <div class="row mt-4 offset-mt-4">
     </div>
   </div>
