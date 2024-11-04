@@ -106,35 +106,24 @@ function totalHours(calendar, dateStr)
 	    }
 	});
 
-	var totalHours = Math.floor(totalMinutes / 60); 
-	var remainingMinutes = totalMinutes % 60;
+	var totalHours = Math.floor(totalMinutes / 60);
+    var remainingMinutes = totalMinutes % 60;
+    var total = totalHours + '.' + (remainingMinutes < 10 ? '0' + remainingMinutes : remainingMinutes);
 
-	total = totalHours + '.' + (remainingMinutes < 10 ? '0' + remainingMinutes : remainingMinutes);
-
-	if(total == 0) {
-		total = '';
-	}
-
-	if(total > 37.5) {
-		var _class="";
-	}
-
-	if(total < 37.5) {
-		var _class="red";
-	}
-
-	var missingClass = totalMinutes < 37.5 * 60 ? "red" : "";
     const targetMinutes = 37.5 * 60;
-    var missingMinutes = targetMinutes - totalMinutes;
+    var missingMinutes = totalMinutes - targetMinutes;
 
-    var missingHours = Math.floor(missingMinutes / 60);
-    var missingRemainingMinutes = missingMinutes % 60;
+    var missingHours = Math.floor(Math.abs(missingMinutes) / 60);
+    var missingRemainingMinutes = Math.abs(missingMinutes) % 60;
 
-    var missingTime = -1 * (missingHours + '.' + (missingRemainingMinutes < 10 ? '0' + missingRemainingMinutes : missingRemainingMinutes));
+    var missingTime = (missingMinutes < 0 ? '-' : '+') + 
+        missingHours + '.' + (missingRemainingMinutes < 10 ? '0' + missingRemainingMinutes : missingRemainingMinutes);
 
+    var missingClass = missingMinutes < 0 ? "red" : "";
 
-	total = '<div class="' + _class + '">' + total + '</div><div>' + missingTime + '</div>';
-	$(totalTd).html(total);
+    var resultHtml = '<div class="' + missingClass + '">' + total + '</div><div>' + missingTime + '</div>';
+    var totalTd = $('td[data-date="' + dateStr + '"]').closest('tr').find('td.fc-total .fc-daygrid-day-total');
+    $(totalTd).html(resultHtml);
 }
 
 function saveHour(hours, date)
