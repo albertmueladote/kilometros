@@ -113,6 +113,18 @@ function totalHours(calendar, dateStr)
 	if(total == 0) {
 		total = '';
 	}
+
+	if(total > 37.5) {
+		var _class="";
+	}
+
+	if(total < 37.5) {
+		var _class="red";
+	}
+
+	var missingHours = total - 37.5;
+
+	total = '<div class="' + _class + '">' + total + '</div><div>' + missingHours + '</div>';
 	$(totalTd).html(total);
 }
 
