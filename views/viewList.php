@@ -6,7 +6,7 @@
     <script src="public/js/list.js?v=<?php echo time(); ?>" defer></script>
 </head>
 <body>
-    <?php require PARTIALS '/navbar.php'; ?>
+    <?php require PARTIALS . '/navbar.php'; ?>
     <div class="container-fluid">
         <header class="center">
             <h1>Kilómetros</h1>

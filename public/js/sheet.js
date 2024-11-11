@@ -2,7 +2,6 @@ $( document ).ready(function() {
     $('button.pdf').click(function(){
         pdf();
     });
-    size(106);
     $('#logout').click(function(){
         logout();
     });

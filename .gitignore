@@ -1,0 +1,5 @@
+.env
+public/km/excel
+public/km/excel/*
+public/km/pdf
+public/km/pdf/*

@@ -3,6 +3,6 @@ include('../conf/conf.php');
 if (!$cookie->exists()) {
     header("Location: /login");
 }
-$list = $ddbb->getAll();
+$list = $excel->getAll();
 include('../views/viewList.php')
 ?>

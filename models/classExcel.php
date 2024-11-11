@@ -117,7 +117,7 @@ class Excel extends DDBB{
         }
     }
 
-    public function remove($id)
+    public function delete($id)
     {
         if($file = $this->getById($id)){
             if($this->remove($id))
@@ -126,7 +126,7 @@ class Excel extends DDBB{
                     unlink($file['excel_path']);
                     if (file_exists($file['pdf_path'])) {
                         unlink($file['pdf_path']);
-                        return true;
+                        return $file['id'];
                     }
                 }
             }

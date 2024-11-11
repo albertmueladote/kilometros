@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-    size(36);
     $('.remove button').click(function(){
         const ask = confirm('¿Estás seguro de que quieres eliminar el fichero?');
         if (ask) {

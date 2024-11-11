@@ -10,7 +10,6 @@ $( document ).ready(function() {
     })
     addRow();
     $('.day input[type="date"]').change(updateDates);
-    size(16);
     $('#logout').click(function(){
         logout();
     });

@@ -3,7 +3,6 @@ require '../../conf/conf.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = $_POST['user'];
     $password = $_POST['password'];
-    
     if($user == USERNAME && $password == PASSWORD)
     {
         if($cookie->create()) {

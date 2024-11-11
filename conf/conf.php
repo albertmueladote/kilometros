@@ -1,4 +1,31 @@
 <?php
+
+function env($param)
+{
+	if (file_exists('../.env')) {
+		$envPath = '../.env';
+	} else {
+		if (file_exists('../../.env')) {
+			$envPath = '../../.env';
+		} else {
+			throw new Exception(".env file not found.");
+		}
+	}
+
+	$env = [];
+	$lines = file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+	foreach ($lines as $line) {
+	    if (strpos(trim($line), '#') === 0) {
+	        continue;
+	    }
+	    list($key, $value) = explode('=', $line, 2);
+	    if($param == trim($key)) {
+	    	return trim($value);
+	    }
+	}
+	return false;
+}
+
 date_default_timezone_set('Europe/Madrid');
 
 define('ROOT', $_SERVER['DOCUMENT_ROOT']);
@@ -14,7 +41,6 @@ define('VENDOR', $_SERVER['DOCUMENT_ROOT'] . '/vendor/');
 define('VIEWS', $_SERVER['DOCUMENT_ROOT'] . '/views/');
 define('PARTIALS', $_SERVER['DOCUMENT_ROOT'] . '/views/partials/');
 
-
 if ($_SERVER['SERVER_NAME'] === 'kilometros.test') {
 	define('PDF_PATH', 'http://kilometros.test/public/km/pdf/');
 } else {
@@ -22,21 +48,21 @@ if ($_SERVER['SERVER_NAME'] === 'kilometros.test') {
 }
 
 if ($_SERVER['SERVER_NAME'] === 'kilometros.test') {
-	define('DDBB_HOST', '127.0.0.1');
-	define('DDBB_NAME', 'kilometros');
-	define('DDBB_USER', 'root');
-	define('DDBB_PASSWORD', '');
+	define('DDBB_HOST', env('local_db_host'));
+	define('DDBB_NAME', env('local_db_name'));
+	define('DDBB_USER', env('local_db_username'));
+	define('DDBB_PASSWORD', env('local_db_password'));
 } else {
-	define('DDBB_HOST', '127.0.0.1');
-	define('DDBB_NAME', 'kilometros');
-	define('DDBB_USER', 'kilometros');
-	define('DDBB_PASSWORD', '1988akalian');
+	define('DDBB_HOST', env('server_db_host'));
+	define('DDBB_NAME', env('server_db_name'));
+	define('DDBB_USER', env('server_db_username'));
+	define('DDBB_PASSWORD', env('server_db_pass'));
 }
 
-define('COOKIE', 'kilometroshqyx5Z8VD1NGNmmbgRie7T3xwfz0hi');
+define('COOKIE', env('cookie'));
 
-define('USERNAME', 'dolores');
-define('PASSWORD', 'dolores');
+define('USERNAME', env('username'));
+define('PASSWORD', env('password'));
 
 require VENDOR . 'autoload.php';
 
