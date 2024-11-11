@@ -56,7 +56,7 @@ if ($_SERVER['SERVER_NAME'] === 'kilometros.test') {
 	define('DDBB_HOST', env('server_db_host'));
 	define('DDBB_NAME', env('server_db_name'));
 	define('DDBB_USER', env('server_db_username'));
-	define('DDBB_PASSWORD', env('server_db_pass'));
+	define('DDBB_PASSWORD', env('server_db_password'));
 }
 
 define('COOKIE', env('cookie'));
