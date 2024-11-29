@@ -35,3 +35,8 @@
     color: white;
     padding: 1px;
 }
+
+.total-hours {
+    text-align: center;
+    padding-bottom: 10px;
+}
